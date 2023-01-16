@@ -13,16 +13,16 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-
+    // Spark
     implementation("com.sparkjava:spark-core:2.9.4")
-
-    // Template engine
     implementation("com.sparkjava:spark-template-velocity:2.7.1")
 
     // Logging facility
     implementation("org.slf4j:slf4j-simple:2.0.5")
 
+    // Tests
+    testImplementation(kotlin("test"))
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
 }
 
 tasks.test {
